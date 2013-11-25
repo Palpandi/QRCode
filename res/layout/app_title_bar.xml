@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp">
+               <TextView
+        android:id="@+id/title_text"
+        android:layout_toLeftOf="@+id/title_bar_home_btn_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FF064973"
+        android:text="text"
+        android:padding="3dp"
+        android:layout_centerVertical="true"
+        android:textSize="32dp"
+        android:singleLine="true"
+		android:ellipsize="marquee"
+		android:marqueeRepeatLimit="marquee_forever"
+		android:scrollHorizontally="true"/>
+    
+    <LinearLayout 
+        android:id="@+id/title_bar_home_btn_layout"
+        android:layout_width="wrap_content"
+	    android:layout_height="fill_parent"
+	    android:orientation="horizontal"
+	    android:layout_alignParentRight="true">
+	    <View
+            android:layout_height="fill_parent"
+            android:layout_width="1px"
+            android:background="#FF064973"/>
+        <View
+            android:layout_height="fill_parent"
+            android:layout_width="1px"
+            android:background="#FF2B6C96"/>
+        <ImageButton 
+	        android:id="@+id/title_bar_home_btn"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:padding="7dp"
+	        android:layout_centerVertical="true"
+	        android:src="@drawable/ic_dropdown"
+	        android:background="@drawable/app_title_bar_button_config"/>
+    </LinearLayout>   
+	<View 
+	    android:layout_width="match_parent"
+	    android:layout_height="2dp"
+	    android:background="@drawable/app_bar_dark_gradient"
+	    android:layout_alignParentBottom="true"/>
+	
+</RelativeLayout>

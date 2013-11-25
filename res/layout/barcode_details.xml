@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:orientation="vertical"
+    	android:background="#CCCCCC">
+    	
+   <Button 
+        android:id="@+id/delete_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:padding="5dip"
+        android:text="Clear All"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:background="@drawable/app_button_config"
+        android:textColor="@drawable/app_button_text_config"
+        android:textSize="18dip"
+        android:layout_alignParentRight="true"/>
+         	
+	<HorizontalScrollView 
+		android:id="@+id/barcode_table_scroll"
+		android:layout_below="@+id/delete_btn"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:fillViewport="true" 
+		android:paddingTop="5dip">
+		
+		<ScrollView 
+			android:id="@+id/barcode_table_scroll_2"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:fillViewport="true" >
+		
+			<LinearLayout 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content" 
+				android:layout_margin="5dip">
+				
+				<TableLayout 
+					android:id="@+id/barcode_table_layout"
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:stretchColumns="0,1" />
+				
+			</LinearLayout>
+		
+		</ScrollView>
+		
+	</HorizontalScrollView>
+	
+	<LinearLayout 
+        android:id="@+id/data_empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+        
+        <TextView 
+			android:id="@+id/data_empty_text"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:textColor="#FF000000"
+			android:textSize="32dp"
+			android:textStyle="bold"
+			android:gravity="center"
+			android:text="No details available."/>    
+        <View 
+            android:layout_marginTop="10dp"
+			android:layout_width="match_parent"
+			android:layout_height="1px"
+			android:background="@drawable/black_horizontal_divider"/>
+	    <View 
+			android:layout_width="match_parent"
+			android:layout_height="1px"
+			android:background="@drawable/white_horizontal_divider"/>
+	        
+    </LinearLayout>    
+</RelativeLayout>
